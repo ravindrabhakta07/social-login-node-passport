@@ -26,7 +26,7 @@ var app = express();
 
 var server = require('https');
 // *** mongoose *** //
-mongoose.connect('mongodb://localhost/passport-social-auth');
+mongoose.connect('mongodb://localhost/social-auth');
 
 
 // *** view engine *** //
