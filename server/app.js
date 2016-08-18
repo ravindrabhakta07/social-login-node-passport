@@ -65,12 +65,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/token', function(req, res){
-  var token = jwt.sign({"name":"Gluuserver"}, config.applicationSecretKey, { expiresIn: 1440 });
+  var token = jwt.sign({"name":"name"}, config.applicationSecretKey, { expiresIn: 1440 });
   res.send(200, { "token_": token });
   console.log("request token genreted");
   return;
 });
-/*app.use('/', expressJwt({ secret: "GluuNodeServerSocialLogin1234567890" }));
+/*app.use('/', expressJwt({ secret: "secret" }));
 app.use('/', function(req, res, next) {
   var authorization = req.header("authorization");
   var session = JSON.parse( new Buffer((authorization.split(' ')[1]).split('.')[1], 'base64').toString());
